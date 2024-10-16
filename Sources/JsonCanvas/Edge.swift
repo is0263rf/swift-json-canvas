@@ -37,6 +37,6 @@ public struct Edge: Codable {
     var toNode: String
     var toSide: ToSide?
     var toEnd: ToEnd?
-    var color: CanvasColor?
+    var color: String?
     var label: String?
 }

@@ -44,7 +44,7 @@ public struct Node: Codable {
     var y: Int
     var width: Int
     var height: Int
-    var color: CanvasColor?
+    var color: String?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -97,7 +97,7 @@ public struct Node: Codable {
         self.y = try container.decode(Int.self, forKey: .y)
         self.width = try container.decode(Int.self, forKey: .width)
         self.height = try container.decode(Int.self, forKey: .height)
-        self.color = try container.decodeIfPresent(CanvasColor.self, forKey: .color)
+        self.color = try container.decodeIfPresent(String.self, forKey: .color)
     }
 
     public func encode(to encoder: any Encoder) throws {
